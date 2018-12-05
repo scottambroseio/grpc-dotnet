@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package String.Grpc;
+
+service String {
+  rpc UpperCase (UpperCaseRequest) returns (UpperCaseResult) {}
+  rpc LowerCase (LowerCaseRequest) returns (LowerCaseResult) {}
+}
+
+message UpperCaseRequest {
+  string String = 1;
+}
+
+message UpperCaseResult {
+  string String = 1;
+}
+
+message LowerCaseRequest {
+  string String = 1;
+}
+
+message LowerCaseResult {
+  string String = 1;
+}
